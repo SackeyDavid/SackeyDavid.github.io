@@ -582,7 +582,9 @@ h3 {
   line-height: 28px;
 }
 
-.glass-card p,
+/* Only apply uppercase metadata style to description paragraphs directly inside glass-card,
+   NOT to role-head paragraphs (date / location) */
+.glass-card > p:not(.role-head p),
 .case-meta {
   margin: 0 0 10px;
   color: var(--muted);
@@ -701,15 +703,18 @@ h3 {
 
 .role-head > div:last-child {
   text-align: right;
+  align-self: flex-start;
 }
 
 .role-head p,
 .timeline .glass-card > p {
   margin: 0;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
-  line-height: 21px;
+  line-height: 20px;
+  text-transform: none;
+  letter-spacing: 0;
 }
 
 .timeline .glass-card > p {
