@@ -950,7 +950,7 @@ h3 {
 }
 
 .project-card .tag-row span {
-  border: 0;
+  border: 1px solid #0000001a;
   border-radius: calc(var(--radius) - 2px);
   padding: 3.5px 10px;
   background: var(--wash);
