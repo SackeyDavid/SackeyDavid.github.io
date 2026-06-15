@@ -33,6 +33,34 @@ if (typeof lucide !== 'undefined') {
   lucide.createIcons();
 }
 
+// ── Project image carousels ─────────────────────────────────────────────────
+document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+  const slides = Array.from(carousel.querySelectorAll('.project-carousel__slide'));
+  const dots = Array.from(carousel.querySelectorAll('.project-carousel__dots span'));
+  const prev = carousel.querySelector('[data-carousel-prev]');
+  const next = carousel.querySelector('[data-carousel-next]');
+  let activeIndex = slides.findIndex((slide) => slide.classList.contains('is-active'));
+
+  if (slides.length < 2) return;
+  if (activeIndex < 0) activeIndex = 0;
+
+  const setActiveSlide = (index) => {
+    activeIndex = (index + slides.length) % slides.length;
+    slides.forEach((slide, slideIndex) => {
+      const isActive = slideIndex === activeIndex;
+      slide.classList.toggle('is-active', isActive);
+      slide.setAttribute('aria-hidden', String(!isActive));
+    });
+    dots.forEach((dot, dotIndex) => {
+      dot.classList.toggle('is-active', dotIndex === activeIndex);
+    });
+  };
+
+  prev?.addEventListener('click', () => setActiveSlide(activeIndex - 1));
+  next?.addEventListener('click', () => setActiveSlide(activeIndex + 1));
+  setActiveSlide(activeIndex);
+});
+
 // ── Contact form ─────────────────────────────────────────────────────────────
 // Handle contact form submit — opens mailto with pre-filled fields
 function handleContactForm(event) {
