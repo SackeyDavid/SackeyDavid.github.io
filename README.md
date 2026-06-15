@@ -1,4 +1,4 @@
-# Sackey K. A. David Portfolio
+# David Sackey Portfolio
 
 Static GitHub Pages profile for a frontend engineer and full-stack architect.
 
