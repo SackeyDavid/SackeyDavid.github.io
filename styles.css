@@ -291,8 +291,7 @@ h3 {
 }
 
 .skill-card h3,
-.role-head h3,
-.contact-card h3 {
+.role-head h3 {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -310,17 +309,6 @@ h3 {
   opacity: 0.8;
 }
 
-.site-footer span,
-.site-footer a {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.site-footer .lucide {
-  width: 14px;
-  height: 14px;
-}
 
 .project-actions a .lucide {
   width: 14px;
@@ -425,7 +413,8 @@ h3 {
   right: -20px;
   bottom: -22px;
   z-index: 2;
-  width: 160px;
+  width: auto;
+  white-space: nowrap;
   min-height: 48px;
   display: inline-flex;
   align-items: center;
@@ -753,6 +742,48 @@ h3 {
 
 .contact-card {
   min-height: 86px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-card__icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--primary-soft);
+  border: 1px solid var(--line-strong);
+  color: var(--ink);
+}
+
+.contact-card__icon .lucide {
+  width: 18px;
+  height: 18px;
+}
+
+.contact-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact-card__body h3 {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  display: block;
+}
+
+.contact-card__body a,
+.contact-card__body p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+  display: block;
 }
 
 .message-card {
@@ -760,6 +791,70 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 16px;
+}
+
+.message-card h3 {
+  margin-bottom: 4px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-field label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  border: 1px solid var(--line-strong);
+  border-radius: 6.75px;
+  padding: 10px 14px;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 13px;
+  font-family: inherit;
+  line-height: 1.5;
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+  resize: none;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--ink);
+  box-shadow: 0 0 0 3px var(--primary-soft);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-field textarea {
+  min-height: 90px;
 }
 
 .text-links {
@@ -781,16 +876,39 @@ h3 {
 .site-footer {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px 18px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   margin: 0 auto;
-  padding: 30px clamp(22px, 10vw, 176px) 38px;
+  padding: 48px 28px 40px;
   border-top: 1px solid var(--line);
   background: var(--surface);
+  text-align: center;
+}
+
+.site-footer__name {
+  margin: 0;
+  color: var(--foreground);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.site-footer__tagline {
+  margin: 0;
   color: var(--muted);
   font-size: 14px;
   font-weight: 400;
-  line-height: 21px;
+  line-height: 1.5;
+}
+
+.site-footer__copy {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 @media (max-width: 1020px) {
