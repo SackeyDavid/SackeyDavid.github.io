@@ -17,12 +17,35 @@
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+[data-theme="dark"] {
+  --bg: #0c0c14;
+  --surface: #0c0c14;
+  --ink: rgb(240, 240, 252);
+  --foreground: oklch(0.96 0 0);
+  --muted: rgb(140, 140, 162);
+  --muted-alpha: rgba(160, 160, 185, 0.75);
+  --wash: #13131f;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.14);
+  --accent: rgb(240, 240, 252);
+  --primary-soft: rgba(255, 255, 255, 0.06);
+  --card: rgba(255, 255, 255, 0.04);
+  --card-strong: rgba(255, 255, 255, 0.08);
+  --success: oklch(0.723 0.219 149.579);
+  color-scheme: dark;
+}
+
 * {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+html,
+body {
+  transition: background-color 250ms ease, color 250ms ease;
 }
 
 body {
@@ -67,8 +90,9 @@ img {
   min-height: 57px;
   padding: 0 max(28px, calc((100vw - 1120px) / 2 + 28px));
   border-bottom: 1px solid var(--line);
-  background: oklab(0.999994 0.0000455678 0.0000200868 / 0.95);
+  background: color-mix(in srgb, var(--bg) 95%, transparent);
   backdrop-filter: blur(4px);
+  transition: background-color 250ms ease, border-color 250ms ease;
 }
 
 .brand {
@@ -103,14 +127,38 @@ nav a:hover,
 }
 
 .theme-toggle {
-  width: 31.5px;
-  height: 31.5px;
+  width: 34px;
+  height: 34px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: var(--card);
   color: var(--ink);
-  font-size: 1.35rem;
-  line-height: 1;
+  cursor: pointer;
+  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  border-color: var(--ink);
+  transform: rotate(12deg);
+}
+
+.theme-toggle .icon-sun,
+.theme-toggle .icon-moon {
+  display: none;
+  pointer-events: none;
+}
+
+:root:not([data-theme="dark"]) .theme-toggle .icon-sun {
+  display: block;
+}
+
+[data-theme="dark"] .theme-toggle .icon-moon {
+  display: block;
 }
 
 .page-shell {

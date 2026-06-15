@@ -1,13 +1,39 @@
+// ── Dark / Light theme ──────────────────────────────────────────────────────
+const html = document.documentElement;
+const themeBtn = document.getElementById('theme-toggle');
+
+// Apply saved preference before first paint to avoid flash
+(function () {
+  const saved = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (saved === 'dark' || (!saved && prefersDark)) {
+    html.setAttribute('data-theme', 'dark');
+  }
+})();
+
+themeBtn?.addEventListener('click', () => {
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  if (isDark) {
+    html.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'light');
+  } else {
+    html.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+  }
+});
+
+// ── External links ───────────────────────────────────────────────────────────
 document.querySelectorAll('a[href^="http"]').forEach((link) => {
   link.rel = "noopener noreferrer";
   link.target = "_blank";
 });
 
-// Initialize Lucide icons
+// ── Lucide icons ─────────────────────────────────────────────────────────────
 if (typeof lucide !== 'undefined') {
   lucide.createIcons();
 }
 
+// ── Contact form ─────────────────────────────────────────────────────────────
 // Handle contact form submit — opens mailto with pre-filled fields
 function handleContactForm(event) {
   event.preventDefault();
@@ -18,4 +44,3 @@ function handleContactForm(event) {
   const body    = `From: ${name} <${email}>\n\n${message}`;
   window.location.href = `mailto:kofiahendev@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
-

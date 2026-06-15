@@ -16,6 +16,16 @@
     <meta property="og:image" content="assets/work-screenshots/manduu-admin.png" />
     <title>David Sackey | Frontend Engineer</title>
     <link rel="stylesheet" href="styles.css?v=20260615-figma-match" />
+    <!-- Inline: apply saved theme before first paint to prevent FOUC -->
+    <script>
+      (function() {
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <header class="home-nav">
@@ -26,7 +36,10 @@
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-        <a class="theme-toggle" href="#top" aria-label="Theme preview"><i data-lucide="sun"></i></a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <i data-lucide="sun" class="icon-sun"></i>
+          <i data-lucide="moon" class="icon-moon"></i>
+        </button>
       </nav>
     </header>
 
