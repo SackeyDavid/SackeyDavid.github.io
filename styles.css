@@ -14,6 +14,7 @@
   --card-strong: oklab(0.999994 0.0000455678 0.0000200868 / 0.9);
   --card-glow: rgba(3, 2, 19, 0.06);
   --success: oklch(0.723 0.219 149.579);
+  --radius: 0.625rem;
   color-scheme: light;
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -950,7 +951,7 @@ h3 {
 
 .project-card .tag-row span {
   border: 0;
-  border-radius: 999px;
+  border-radius: calc(var(--radius) - 2px);
   padding: 3.5px 10px;
   background: var(--wash);
   color: var(--ink);
