@@ -609,7 +609,6 @@ h3 {
 .glass-card:hover,
 .case-card:hover,
 .skill-card:hover,
-.project-card:hover,
 .contact-card:hover,
 .message-card:hover {
   border-color: var(--line-strong);
