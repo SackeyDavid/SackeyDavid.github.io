@@ -21,29 +21,39 @@
     <header class="home-nav">
       <a class="brand" href="#top">Sackey David</a>
       <nav aria-label="Primary navigation">
-        <a href="assets/David_Sackey_Resume.pdf">Curriculum Vitae</a>
-        <a href="mailto:kofiahendev@gmail.com">Contact</a>
-        <a href="https://github.com/sackeydavid">GitHub</a>
+        <a href="#top">Home</a>
+        <a href="#stack">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a class="theme-toggle" href="#top" aria-label="Theme preview">☼</a>
       </nav>
     </header>
 
     <main id="top" class="page-shell">
-      <section class="hero glass-panel">
+      <section class="hero">
         <div class="hero__content">
-          <p class="kicker">Angular Enterprise UI · Real-Time Systems · Engineering Automation</p>
-          <h1>Sackey K. A. David</h1>
+          <p class="availability"><span aria-hidden="true">✣</span> Available for Work</p>
+          <h1>Hello, I'm Sackey David</h1>
           <p class="hero__summary">
-            Frontend engineer and full-stack architect building polished enterprise interfaces, data-heavy dashboards, and scalable delivery systems for production teams.
+            Frontend engineer and full-stack architect crafting digital experiences with <strong>6+ years</strong> of production expertise.
           </p>
           <p class="hero__focus">
-            Current focus:
-            <span>Angular 18/19 architecture, Signals, Playwright, DX automation, and AI-enabled support workflows.</span>
+            Specializing in Angular enterprise platforms, real-time systems, developer tooling, and scalable interfaces that help teams move faster.
           </p>
           <div class="hero__links">
-            <a href="assets/David_Sackey_Resume.pdf">Download CV</a>
-            <a href="https://www.linkedin.com/in/david-ka-sackey">LinkedIn</a>
-            <a href="mailto:kofiahendev@gmail.com">Email</a>
+            <a class="button button--primary" href="assets/David_Sackey_Resume.pdf">Download Resume</a>
+            <a class="button button--secondary" href="#work">View My Work</a>
           </div>
+          <div class="social-links" aria-label="Social links">
+            <a href="https://github.com/sackeydavid" aria-label="GitHub">gh</a>
+            <a href="https://www.linkedin.com/in/david-ka-sackey" aria-label="LinkedIn">in</a>
+            <a href="mailto:kofiahendev@gmail.com" aria-label="Email">@</a>
+          </div>
+        </div>
+        <div class="hero__visual" aria-label="Selected product interface preview">
+          <img src="assets/profile/david-sackey.jpeg" alt="Portrait of Sackey David" />
+          <p class="hire-badge"><span></span> Available for hire</p>
         </div>
       </section>
 
@@ -131,7 +141,7 @@
         </div>
       </section>
 
-      <section class="section-block" aria-labelledby="experience-heading">
+      <section id="experience" class="section-block" aria-labelledby="experience-heading">
         <div class="section-title">
           <p class="kicker">Experience</p>
           <h2 id="experience-heading">Engineering background</h2>
@@ -203,7 +213,7 @@
         </div>
       </section>
 
-      <section class="section-block" aria-labelledby="stack-heading">
+      <section id="stack" class="section-block" aria-labelledby="stack-heading">
         <div class="section-title">
           <p class="kicker">Stack</p>
           <h2 id="stack-heading">Tools I work with</h2>
@@ -259,7 +269,7 @@
       </section>
     </main>
 
-    <footer class="site-footer">
+    <footer id="contact" class="site-footer">
       <span>Accra, Ghana</span>
       <a href="mailto:kofiahendev@gmail.com">kofiahendev@gmail.com</a>
       <a href="tel:+233245004247">+233 24 500 4247</a>
