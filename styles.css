@@ -930,17 +930,17 @@ h3 {
 }
 
 .project-body h3 {
-  font-size: 21px;
+  font-size: 19px;
   font-weight: 500;
-  line-height: 28px;
+  line-height: 26px;
 }
 
 .project-card p {
-  margin-top: 22px;
+  margin-top: 14px;
   color: var(--muted);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 24px;
 }
 
 .project-card .tag-row {
@@ -950,13 +950,13 @@ h3 {
 
 .project-card .tag-row span {
   border: 0;
-  border-radius: 9px;
-  padding: 5px 13px;
+  border-radius: 999px;
+  padding: 4px 12px;
   background: var(--wash);
   color: var(--ink);
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 19px;
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 18px;
 }
 
 .project-actions {
@@ -1296,9 +1296,7 @@ h3 {
     min-height: 0;
   }
 
-  .project-actions a {
-    flex: 1 1 140px;
-  }
+  /* Buttons shouldn't stretch on mobile */
 
   .project-carousel__button {
     opacity: 1;
