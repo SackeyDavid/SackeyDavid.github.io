@@ -252,17 +252,82 @@ h3 {
   color: var(--surface);
 }
 
-.button--primary::before {
-  content: "⇩";
-  margin-right: 12px;
-  font-size: 1.15rem;
-}
-
 .button--secondary {
   border: 1px solid var(--line-strong);
   background: var(--card);
   color: var(--foreground);
 }
+
+/* Lucide Icons Global Styling */
+.lucide {
+  width: 18px;
+  height: 18px;
+  stroke-width: 1.8px;
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Specific alignments and overrides */
+.theme-toggle .lucide {
+  width: 20px;
+  height: 20px;
+}
+
+.availability .lucide {
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+}
+
+.button .lucide {
+  width: 16px;
+  height: 16px;
+}
+
+.social-links .lucide {
+  width: 18px;
+  height: 18px;
+}
+
+.skill-card h3,
+.role-head h3,
+.contact-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.role-head p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.role-head p .lucide {
+  width: 14px;
+  height: 14px;
+  opacity: 0.8;
+}
+
+.site-footer span,
+.site-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.site-footer .lucide {
+  width: 14px;
+  height: 14px;
+}
+
+.project-actions a .lucide {
+  width: 14px;
+  height: 14px;
+  margin-left: 4px;
+}
+
 
 .button:hover {
   transform: translateY(-2px);
