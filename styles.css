@@ -747,6 +747,10 @@ h3 {
   align-self: flex-start;
 }
 
+.role-head > div:last-child p {
+  justify-content: flex-end;
+}
+
 .role-head p,
 .timeline .glass-card > p {
   margin: 0;
