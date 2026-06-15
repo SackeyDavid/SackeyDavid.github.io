@@ -779,7 +779,7 @@ h3 {
   border-color: var(--border, #0000001a);
   border-radius: calc(var(--radius) + 2px);
   background: var(--card, #ffffff);
-  box-shadow: 0 1px 3px 0 #0000001a, 0 1px 2px -1px #0000001a;
+  box-shadow: none;
   transition:
     border-color 180ms ease,
     transform 180ms ease,
