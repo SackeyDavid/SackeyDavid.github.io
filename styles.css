@@ -635,16 +635,15 @@ h3 {
   line-height: 28px;
 }
 
-.case-meta {
+.glass-card > p:not(.role-head p), .case-meta {
   margin: 0 0 10px;
   color: var(--muted);
   font-size: 0.74rem;
   font-weight: 500;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
-.glass-card > p:not(.role-head p),
 .glass-card span,
 .case-card p:not(.case-meta),
 .project-card p,
