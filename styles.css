@@ -725,7 +725,7 @@ h3 {
 
 .tag-row span,
 .tag-cloud span {
-  border: 1px solid #0000001a;
+  border: 1px solid oklab(0.11 0.01 -0.04 / 0.18);
   border-radius: calc(var(--radius) - 2px);
   padding: 3.5px 10px;
   color: var(--ink);
