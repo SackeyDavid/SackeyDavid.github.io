@@ -638,7 +638,7 @@ h3 {
 .glass-card > p:not(.role-head p), .case-meta {
   margin: 0 0 10px;
   color: var(--muted);
-  font-size: 0.74rem;
+  font-size: 14px;
   font-weight: 500;
   text-transform: none;
 }
