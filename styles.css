@@ -1039,7 +1039,7 @@ h3 {
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  background: var(--primary-soft);
+  background: var(--wash);
   border: 1px solid var(--line-strong);
   color: var(--ink);
 }
